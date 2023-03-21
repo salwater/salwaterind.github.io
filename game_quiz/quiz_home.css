@@ -1,0 +1,41 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-header{
+    width: 100%;
+    height: 40px;
+    background-color: gray;
+}
+
+.ul-header{
+    display: flex;
+    height: 40px;
+    justify-content: left;
+    align-items: center;
+}
+
+.li-header{
+    list-style-type: none;
+    margin: 3px;
+    padding: 5px;
+    color: white;
+}
+
+.a-header{
+    color:white;
+    text-decoration: none;
+
+}
+
+.container-isi{
+    background-color: rgb(59, 48, 48);
+    height: 100px;
+}
+
+.h2-isi{
+    padding-top: 20px;
+    color: white;
+}
