@@ -33,6 +33,7 @@
 .container-game{
     background-color: rgb(59, 48, 48);
     height: auto;
+    background-image: url(gambar/wallpaper.png);
 }
 
 .h2-isi{

@@ -31,12 +31,18 @@
 }
 
 .container-isi{
-    background-color: rgb(59, 48, 48);
     height: 100px;
+    background-image: url(gambar/wallpaper.png);
 }
 
 .h2-isi{
     padding-top: 20px;
     color: white;
+}
+
+.container-footer{
+    background-color: rgb(59, 48, 48);
+    height: 100px;
+    width: auto;
 }
 
