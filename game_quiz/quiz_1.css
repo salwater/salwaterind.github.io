@@ -32,7 +32,7 @@
 
 .container-isi{
     background-color: rgb(59, 48, 48);
-    height: 100px;
+    height: 60px;
 }
 
 .h2-isi{
@@ -43,4 +43,16 @@
 .a-isi{
     color: white;
     text-decoration: none;
+}
+
+.lvl{
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+.container-quiz{
+    color: white;
+    background-color: black;
+    text-align: center;
 }

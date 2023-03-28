@@ -31,7 +31,7 @@
 }
 
 .container-isi{
-    height: 100px;
+    height: auto;
     background-image: url(gambar/wallpaper.png);
 }
 
@@ -40,9 +40,19 @@
     color: white;
 }
 
-.container-footer{
-    background-color: rgb(59, 48, 48);
-    height: 100px;
-    width: auto;
+.a-isi{
+    padding-top: 20px;
+}
+
+.p-isi{
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.a-1{
+    color: white;
+    text-decoration: none;
+
 }
 
