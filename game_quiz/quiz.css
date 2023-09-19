@@ -63,7 +63,7 @@
 .container-quiz{
     color: white;
     background-color: black;
-    padding: 240px;
+    padding: 150px;
     text-align: left;
 }
 
@@ -93,4 +93,14 @@ footer {
 .jab{
     text-decoration: none;
     color: white;
+}
+
+.p{
+    color: black;
+}
+
+.k{
+    text-decoration: none;
+    color: black;
+    text-align: right;
 }
