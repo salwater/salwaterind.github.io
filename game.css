@@ -48,11 +48,15 @@
 .h2-isi{
     padding-top: 20px;
     color: white;
+    background-color: black;
 }
 
 .li-isi{
     list-style-type: none;
     padding: 10px;
+    margin-right: 80%;
+    border-radius: 10px;
+    background-color: brown;
 }
 
 .a-isi{
@@ -63,4 +67,8 @@
 .p-isi{
     text-decoration: none;
     color: white;
+    background-color: black;
+    padding: 10px;
+    margin-right: 80%;
+    border-radius: 10px;
 }

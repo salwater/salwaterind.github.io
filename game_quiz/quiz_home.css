@@ -51,8 +51,13 @@
 }
 
 .a-isi{
+    text-align: center;
     color: white;
     text-decoration: none;
+    background-color: blue;
+    border-bottom:5px solid #2639e4;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 footer {
