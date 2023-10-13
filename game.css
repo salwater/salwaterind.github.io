@@ -17,46 +17,33 @@
     align-items: center;
 }
 
-.ul-header{
-    display: flex;
-    height: 40px;
-    justify-content: left;
-    align-items: center;
-}
-
 .li-header{
     list-style-type: none;
     margin: 3px;
     padding: 5px;
-    background:#2C97DF;
+    color: white;
+}
+
+.a-header{
     color:white;
-    border-top:0;
-    border-left:0;
-    border-right:0;
-    border-bottom:5px solid #2A80B9;
-    padding:10px 20px;
-    text-decoration:none;
-    font-family:sans-serif;
-    font-size:11pt;
+    text-decoration: none;
+
 }
 
 .container-game{
     background-color: rgb(59, 48, 48);
     height: auto;
-    background-color: black;
+    background-image: url(gambar/wallpaper.png);
 }
+
 .h2-isi{
     padding-top: 20px;
     color: white;
-    background-color: black;
 }
 
 .li-isi{
     list-style-type: none;
     padding: 10px;
-    margin-right: 80%;
-    border-radius: 10px;
-    background-color: brown;
 }
 
 .a-isi{
@@ -67,8 +54,4 @@
 .p-isi{
     text-decoration: none;
     color: white;
-    background-color: black;
-    padding: 10px;
-    margin-right: 80%;
-    border-radius: 10px;
 }
