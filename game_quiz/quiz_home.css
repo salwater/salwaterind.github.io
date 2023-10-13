@@ -21,7 +21,16 @@
     list-style-type: none;
     margin: 3px;
     padding: 5px;
-    color: white;
+    background:#2C97DF;
+    color:white;
+    border-top:0;
+    border-left:0;
+    border-right:0;
+    border-bottom:5px solid #2A80B9;
+    padding:10px 20px;
+    text-decoration:none;
+    font-family:sans-serif;
+    font-size:11pt;
 }
 
 .a-header{
@@ -32,15 +41,28 @@
 
 .container-isi{
     background-color: rgb(59, 48, 48);
-    height: 100px;
+    height: 200px;
 }
 
 .h2-isi{
     padding-top: 20px;
     color: white;
+    text-align: center;
 }
 
 .a-isi{
+    text-align: center;
     color: white;
     text-decoration: none;
+    background-color: blue;
+    border-bottom:5px solid #2639e4;
+    padding: 10px;
+    border-radius: 10px;
 }
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
