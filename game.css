@@ -129,7 +129,7 @@
   .ag-courses-item_bg {
     height: 128px;
     width: 128px;
-    background-color: black;
+    background-color: cyan;
   
     z-index: 1;
     position: absolute;
