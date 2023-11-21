@@ -64,8 +64,7 @@ h3{
 }
 
 .warnaH{
-    color: black;
-    background-color: white;
+    color: white;
 }
 
 .a-isi{
@@ -87,15 +86,32 @@ footer {
 .soal{
     color: black;
     padding-left: 2%;
+    margin-bottom: 4px;
 }
 
 .jawaban{
     color: red;
-    padding-left: 5%;
+    padding-left: 2%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: black;
+    border-radius: 20px;
+    margin-left: 50px;
+    margin-right: 60%;
 }
 
 .jawabanB{
-    color: black;
+    color: white;
     font-weight: bolder;
     padding-left: 5%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: black;
+    border-radius: 20px;
+    margin-left: 50px;
+    margin-right: 60%;
+}
+
+.judula{
+  margin-bottom: 10px;
 }
