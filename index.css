@@ -47,13 +47,38 @@ main{
   width: 90vm;
   margin: 0 auto;
   padding: 30px 20px;
-  min-height: calc(100vh - 211px - 58px);
 }
 
-.h1{
+.mainjud{
   text-align: center;
-  font-size: 100px;
+  font-size: 50px;
   color: black;
+}
+
+.mainp{
+  text-align: center;
+  font-size: 30px;
+  color: black;
+}
+
+.portofolio{
+  padding-top: 30px;
+  padding-bottom: 3px;
+}
+
+.mainpor{
+  color: white;
+  font-size: 30px;
+  background-color: blue;
+  border-radius: 5px;
+  width: 200px;
+  height: 100%;
+}
+
+.mainporis{
+  padding-top: 10px;
+  font-size: 20px;
+
 }
 
 footer {
