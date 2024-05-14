@@ -47,27 +47,28 @@ main{
   width: 90vm;
   margin: 0 auto;
   padding: 30px 20px;
+  background-color: black;
 }
 
 .mainjud{
   text-align: center;
   font-size: 50px;
-  color: black;
+  color: white;
 }
 
 .mainp{
   text-align: center;
   font-size: 30px;
-  color: black;
+  color: white;
 }
 
 .portofolio{
-  padding-top: 30px;
-  padding-bottom: 3px;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  color: white;
 }
 
 .mainpor{
-  color: white;
   font-size: 30px;
   background-color: blue;
   border-radius: 5px;
@@ -86,4 +87,16 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
+}
+
+.f1{
+  padding-bottom: 10px;
+}
+
+.fa1{
+  width: 100px;
+}
+
+.fa2{
+  width: 50px;
 }
