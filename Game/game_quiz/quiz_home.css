@@ -45,12 +45,15 @@
 .container-isi{
     background-color: rgb(59, 48, 48);
     height: 200px;
+    padding-top: 100px;
+    padding-bottom: 200px;
 }
 
 .h2-isi{
     padding-top: 20px;
     color: white;
     text-align: center;
+    padding-bottom: 100px;
 }
 
 .a-isi{

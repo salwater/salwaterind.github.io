@@ -68,6 +68,13 @@
     background-color: black;
     padding: 150px;
     text-align: left;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .container-quiz {
+    padding: 10px; /* Lebar teks adalah 100% dari lebar layar pada perangkat Android */
+  }
 }
 
 footer {
@@ -93,19 +100,32 @@ footer {
     font-size:22px;
 }
 
+@media only screen and (max-width: 767px) {
+  .meng {
+    width: 39%; /* Lebar teks adalah 100% dari lebar layar pada perangkat Android */
+  }
+}
+
+.soal{
+  padding-bottom: 20px;
+}
+
 .jab{
     text-decoration: none;
-    color: white;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
 }
 
 .p{
     color: black;
+    padding-bottom: 250px;
 }
 
 .k{
+    padding-top: 200px;
     text-decoration: none;
     color: black;
-    text-align: right;
 }
 
 .f1{
