@@ -78,8 +78,14 @@ article h1::after{
 }
 
 .i{
-  width: 400px;
   font-size: large;
+  width: 60%;
+}
+
+@media only screen and (max-width: 767px) {
+  .i {
+    width: 100%; /* Lebar teks adalah 100% dari lebar layar pada perangkat Android */
+  }
 }
 
 .op{
