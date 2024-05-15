@@ -68,3 +68,23 @@ let result = setInterval(() => {
         playerScore = 0;
     }
 }, 10);
+
+// Jump Your Character (For PC)
+window.addEventListener("click", () => {
+    if (dino.classList != "dinoActive") {
+        dino.classList.add("dinoActive");
+        setTimeout(() => {
+            dino.classList.remove("dinoActive");
+        }, 500);
+    }
+});
+
+// Jump Your Character (For Mobile)
+window.addEventListener("touchstart", () => {
+    if (dino.classList != "dinoActive") {
+        dino.classList.add("dinoActive");
+        setTimeout(() => {
+            dino.classList.remove("dinoActive");
+        }, 500);
+    }
+});
