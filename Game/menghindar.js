@@ -47,12 +47,14 @@ function jump() {
 startButton.addEventListener("click", () => {
     if (!gameStarted) {
         startGame();
+    } else {
+        jump();
     }
 });
 
 // Event listener for the space bar to start the game and jump
 window.addEventListener("keydown", (e) => {
-    if (e.code == "Space") {
+    if (e.code === "Space") {
         if (!gameStarted) {
             startGame();
         } else {
@@ -61,11 +63,22 @@ window.addEventListener("keydown", (e) => {
     }
 });
 
-// Jump your character (For PC)
-window.addEventListener("click", jump);
+// Event listener for clicks and touches to start the game and jump
+window.addEventListener("click", () => {
+    if (!gameStarted) {
+        startGame();
+    } else {
+        jump();
+    }
+});
 
-// Jump your character (For Mobile)
-window.addEventListener("touchstart", jump);
+window.addEventListener("touchstart", () => {
+    if (!gameStarted) {
+        startGame();
+    } else {
+        jump();
+    }
+});
 
 // 'Game Over' if 'Character' hits the 'Block'
 let result = setInterval(() => {
