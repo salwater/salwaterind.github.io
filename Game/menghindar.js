@@ -5,61 +5,58 @@ let road = document.querySelector("#road");
 let cloud = document.querySelector("#cloud");
 let score = document.querySelector("#score");
 let gameOver = document.querySelector("#gameOver");
+let startButton = document.querySelector("#startButton");
 
-//declaring variable for score
+// Declaring variable for score
 let interval = null;
 let playerScore = 0;
 
-
-//function for score
+// Function for score
 let scoreCounter = () => {
     playerScore++;
     score.innerHTML = `Score <b>${playerScore}</b>`;
 }
 
+// Function to start the game
+function startGame() {
+    gameOver.style.display = "none";
+    block.classList.add("blockActive");
+    road.firstElementChild.style.animation = "roadAnimate 1.5s linear infinite";
+    cloud.firstElementChild.style.animation = "cloudAnimate 50s linear infinite";
 
-//start Game
+    // Score
+    playerScore = 0;
+    interval = setInterval(scoreCounter, 200);
+}
+
+// Event listener for the start button
+startButton.addEventListener("click", startGame);
+
+// Event listener for the space bar to start the game
 window.addEventListener("keydown", (start) => {
-    //    console.log(start);
     if (start.code == "Space") {
-        gameOver.style.display = "none";
-        block.classList.add("blockActive");
-        road.firstElementChild.style.animation = "roadAnimate 1.5s linear infinite";
-        cloud.firstElementChild.style.animation = "cloudAnimate 50s linear infinite";
-
-        //score
-        let playerScore = 0;
-        interval = setInterval(scoreCounter, 200);
+        startGame();
     }
 });
 
-
-//jump Your Character
+// Jump your character
 window.addEventListener("keydown", (e) => {
-    //    console.log(e);
-
-    if (e.key == "ArrowUp")
-        if (dino.classList != "dinoActive") {
+    if (e.key == "ArrowUp") {
+        if (!dino.classList.contains("dinoActive")) {
             dino.classList.add("dinoActive");
-
-            //                remove class after 0.5 seconds
             setTimeout(() => {
                 dino.classList.remove("dinoActive");
             }, 500);
         }
+    }
 });
 
-//'Game Over' if 'Character' hit The 'Block' 
+// 'Game Over' if 'Character' hits the 'Block' 
 let result = setInterval(() => {
     let dinoBottom = parseInt(getComputedStyle(dino).getPropertyValue("bottom"));
-    //    console.log("dinoBottom" + dinoBottom);
-
     let blockLeft = parseInt(getComputedStyle(block).getPropertyValue("left"));
-    //    console.log("BlockLeft" + blockLeft);
 
     if (dinoBottom <= 90 && blockLeft >= 20 && blockLeft <= 145) {
-        //        console.log("Game Over");
-
         gameOver.style.display = "block";
         block.classList.remove("blockActive");
         road.firstElementChild.style.animation = "none";
@@ -69,9 +66,9 @@ let result = setInterval(() => {
     }
 }, 10);
 
-// Jump Your Character (For PC)
+// Jump your character (For PC)
 window.addEventListener("click", () => {
-    if (dino.classList != "dinoActive") {
+    if (!dino.classList.contains("dinoActive")) {
         dino.classList.add("dinoActive");
         setTimeout(() => {
             dino.classList.remove("dinoActive");
@@ -79,9 +76,9 @@ window.addEventListener("click", () => {
     }
 });
 
-// Jump Your Character (For Mobile)
+// Jump your character (For Mobile)
 window.addEventListener("touchstart", () => {
-    if (dino.classList != "dinoActive") {
+    if (!dino.classList.contains("dinoActive")) {
         dino.classList.add("dinoActive");
         setTimeout(() => {
             dino.classList.remove("dinoActive");
