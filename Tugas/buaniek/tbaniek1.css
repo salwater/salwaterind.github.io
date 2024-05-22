@@ -1,126 +1,132 @@
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
 /* header */
 .navbar {
-  background-color: #333;
-  overflow: hidden;
+    background-color: #333;
+    overflow: hidden;
 }
 
 .navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 .navbar a:hover {
-  background-color: #ddd;
-  color: black;
+    background-color: #ddd;
+    color: black;
 }
 
 .navbar a.active {
-  background-color: #4CAF50;
-  color: white;
+    background-color: #4CAF50;
+    color: white;
 }
 
 @media screen and (max-width: 600px) {
-  .navbar a {
-    float: none;
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
+    .navbar a {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
 
-  .navbar a.active {
-    background-color: #4CAF50;
-    color: white;
-  }
+    .navbar a.active {
+        background-color: #4CAF50;
+        color: white;
+    }
 }
 
 /* mainl */
-main{
-  width: 90vm;
-  margin: 0 auto;
-  padding: 30px 20px;
-  background-color: black;
+main {
+    width: 90vm;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background-color: black;
 }
 
-.mainjud{
-  text-align: center;
-  font-size: 50px;
-  color: white;
-}
-
-.mainp{
-  text-align: center;
-  font-size: 30px;
-  color: white;
-}
-
-@media only screen and (max-width: 767px) {
-  .mainjud {
-      font-size: 30px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .mainp {
-      font-size: 15px;
-  }
-}
-
-.portofolio{
-  padding-top: 100px;
-  padding-bottom: 10px;
-  color: white;
-}
-
-.mainpor{
-  font-size: 30px;
-  background-color: blue;
-  border-radius: 5px;
-  width: 200px;
-  height: 100%;
-}
-
-.mainporis{
-  padding-top: 10px;
-  font-size: 20px;
-
-}
-
-.isian{
+.mainjud {
+    text-align: center;
+    font-size: 50px;
     color: white;
 }
 
-.pentag, .mantag, .jjtag, .tptag {
+.mainp {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+@media only screen and (max-width: 767px) {
+    .mainjud {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .mainp {
+        font-size: 15px;
+    }
+}
+
+.portofolio {
+    padding-top: 100px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.mainpor {
+    font-size: 30px;
+    background-color: blue;
+    border-radius: 5px;
+    width: 200px;
+    height: 100%;
+}
+
+.mainporis {
+    padding-top: 10px;
+    font-size: 20px;
+
+}
+
+.isian {
+    color: white;
+}
+
+.jjtag,
+.mantag,
+.pentag,
+.tptag {
     margin-bottom: 30px;
 }
 
-.penj{
-  padding-top: 100px;
+.penj {
+    padding-top: 100px;
 }
 
-.penj, .manj, .jjj, .tpj{
+.jjj,
+.manj,
+.penj,
+.tpj {
     color: white;
     cursor: pointer;
     margin-bottom: 10px;
 }
 
-.penj:hover{
+.penj:hover {
     color: #0066cc;
 }
 
-.manj:hover{
+.manj:hover {
     color: #0066cc;
 }
 
-.jjj:hover{
+.jjj:hover {
     color: #0066cc;
 }
 
@@ -128,22 +134,28 @@ main{
     color: #0066cc;
 }
 
-.jjll{
+.jjll {
     color: #0066cc;
     font-size: x-large;
     font: bold;
 }
 
-.penl, .manl, .jjl, .tpl{
+.jjl,
+.manl,
+.penl,
+.tpl {
     line-height: 1.6;
     font-size: large;
 }
 
 @media only screen and (max-width: 767px) {
-    .penl, .manl, .jjl, .tpl {
+    .jjl,
+    .manl,
+    .penl,
+    .tpl {
         font-size: medium;
     }
-  }
+}
 
 @media only screen and (max-width: 767px) {
     .jjll {
@@ -152,22 +164,22 @@ main{
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
-.f1{
-  padding-bottom: 10px;
+.f1 {
+    padding-bottom: 10px;
 }
 
-.fa1{
-  width: 100px;
-  height: 20%;
+.fa1 {
+    width: 100px;
+    height: 20%;
 }
 
-.fa2{
-  width: 50px;
-  height: 20%;
+.fa2 {
+    width: 50px;
+    height: 20%;
 }

@@ -23,7 +23,9 @@ let scoreCounter = () => {
 // Function to start the game
 function startGame() {
     gameOver.style.display = "none";
-    block.classList.add("blockActive");
+    block
+        .classList
+        .add("blockActive");
     road.firstElementChild.style.animation = "roadAnimate 1.5s linear infinite";
     cloud.firstElementChild.style.animation = "cloudAnimate 50s linear infinite";
 
@@ -36,9 +38,13 @@ function startGame() {
 // Function to jump the character
 function jump() {
     if (!dino.classList.contains("dinoActive")) {
-        dino.classList.add("dinoActive");
+        dino
+            .classList
+            .add("dinoActive");
         setTimeout(() => {
-            dino.classList.remove("dinoActive");
+            dino
+                .classList
+                .remove("dinoActive");
         }, 500);
     }
 }
@@ -87,7 +93,9 @@ let result = setInterval(() => {
 
     if (dinoBottom <= 90 && blockLeft >= 20 && blockLeft <= 145) {
         gameOver.style.display = "block";
-        block.classList.remove("blockActive");
+        block
+            .classList
+            .remove("blockActive");
         road.firstElementChild.style.animation = "none";
         cloud.firstElementChild.style.animation = "none";
         clearInterval(interval);
