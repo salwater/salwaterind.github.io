@@ -173,13 +173,27 @@ main {
 
 @media only screen and (max-width: 767px) {
   .mainjud {
-      font-size: 30px;
+      font-size: 28px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .mainp {
       font-size: 15px;
+  }
+}
+
+.pjud{
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  padding-bottom: 100px;
+}
+
+@media only screen and (max-width: 767px) {
+  .pjud{
+    padding-bottom: 20px;
+    font-size: 25px;
   }
 }
 
