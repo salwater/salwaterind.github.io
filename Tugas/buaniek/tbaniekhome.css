@@ -173,13 +173,13 @@ main {
 
 @media only screen and (max-width: 767px) {
   .mainjud {
-      font-size: 25px;
+      font-size: 30px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .mainp {
-      font-size: 15px;
+      font-size: 20px;
   }
 }
 
