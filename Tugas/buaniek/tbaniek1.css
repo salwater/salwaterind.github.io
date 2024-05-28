@@ -60,6 +60,7 @@ main {
     text-align: center;
     font-size: 30px;
     color: white;
+    padding-bottom: 100px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -103,10 +104,6 @@ main {
 .pentag,
 .tptag {
     margin-bottom: 30px;
-}
-
-.penj {
-    padding-top: 100px;
 }
 
 .jjj,
@@ -161,6 +158,11 @@ main {
     .jjll {
         font-size: large;
     }
+}
+
+.space{
+    color: transparent;
+    padding-bottom: 260px;
 }
 
 footer {
