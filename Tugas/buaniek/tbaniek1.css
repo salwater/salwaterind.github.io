@@ -132,9 +132,16 @@ main {
 }
 
 .jjll {
-    color: #0066cc;
+    color: #7bb5ee;
     font-size: x-large;
     font: bold;
+    padding-left: 200px;
+}
+
+@media only screen and(max-width: 767px) {
+    .jjll{
+        padding-left: 0px;
+    }
 }
 
 .jjl,
@@ -143,6 +150,7 @@ main {
 .tpl {
     line-height: 1.6;
     font-size: large;
+    padding-left: 250px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -151,6 +159,7 @@ main {
     .penl,
     .tpl {
         font-size: medium;
+        padding-left: 0px;
     }
 }
 
