@@ -153,7 +153,7 @@ main {
     background-color: blueviolet;
 }
 .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
-    background-color: green;
+    background-color: rgb(33, 138, 187);
 }
 
 @media only screen and (max-width: 979px) {
