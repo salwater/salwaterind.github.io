@@ -10,61 +10,87 @@ body {
     background-color: #181818; /* Tema gelap yang menarik */
     color: #e0e0e0;
     line-height: 1.6;
+    margin: 0; /* Reset margin body */
 }
 
-/* Header */
-.navbar {
-    background-color: rgba(30, 30, 30, 0.9); /* Latar belakang sedikit transparan */
-    overflow: hidden;
+/* Header Burger */
+.burger-header {
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 15px 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
     display: flex;
-    justify-content: center; /* Header tetap di atas tengah */
+    justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    border-bottom: 1px solid #444; /* Garis pemisah dengan konten */
+    border-bottom: 1px solid #444;
 }
 
-.navbar a {
+.burger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: #f2f2f2;
+    transition: 0.4s;
+}
+
+.burger-nav {
+    display: none; /* Sembunyikan navigasi default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(30, 30, 30, 0.95);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.burger-nav.open {
+    display: flex; /* Tampilkan navigasi saat ikon burger diklik */
+}
+
+.burger-nav a {
     display: block;
     color: #f2f2f2;
     text-align: center;
     padding: 10px 15px;
     text-decoration: none;
-    margin: 0 10px;
-    border-radius: 5px;
+    width: 100%;
     transition: background-color 0.3s ease;
 }
 
-.navbar a:hover {
+.burger-nav a:hover {
     background-color: #555;
     color: white;
 }
 
-.navbar a.active {
-    background-color: #007bff; /* Warna aktif yang menarik */
-    color: white;
+.burger-icon.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-7px, 6px);
 }
 
-@media screen and (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .navbar a {
-        width: 100%;
-        margin: 5px 0;
-        text-align: left;
-    }
+.burger-icon.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-icon.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-7px, -6px);
 }
 
 /* Main Content (Wikipedia Style) */
 main.wikipedia-style {
     display: flex;
-    padding: 80px 20px 40px; /* Ruang untuk header dan footer */
+    padding: 100px 20px 40px; /* Sesuaikan padding atas untuk header burger */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -74,7 +100,7 @@ main.wikipedia-style {
     padding-right: 20px;
     border-right: 1px solid #444;
     position: sticky;
-    top: 80px; /* Sesuaikan dengan tinggi header */
+    top: 100px; /* Sesuaikan dengan tinggi header burger */
     height: fit-content;
 }
 
@@ -219,7 +245,7 @@ footer {
 @media screen and (max-width: 900px) {
     main.wikipedia-style {
         flex-direction: column;
-        padding-top: 60px; /* Sesuaikan padding untuk header tetap */
+        padding-top: 120px; /* Sesuaikan padding untuk header burger */
     }
     .sidebar {
         width: 100%;
