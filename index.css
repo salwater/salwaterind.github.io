@@ -1,243 +1,307 @@
+/* Reset Dasar dan Body */
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-/* header */
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    /* Menggunakan flexbox untuk tata letak utama */
+    flex-direction: column;
+    /* Menyusun elemen body secara vertikal */
+    min-height: 100vh;
+    /* Memastikan body setidaknya setinggi viewport */
+}
+
+/* Header dan Navigasi (Vertikal) */
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    /* Menggunakan fixed untuk tetap di posisi saat di-scroll */
+    right: 20px;
+    /* Jarak dari sisi kanan */
+    top: 50%;
+    /* Pusatkan secara vertikal */
+    transform: translateY(-50%);
+    /* Koreksi posisi tengah */
+    z-index: 100;
+    border-radius: 8px;
+    /* Tambahkan sedikit radius */
+    display: flex;
+    flex-direction: column;
+    /* Susun item secara vertikal */
+    align-items: center;
+    /* Pusatkan item horizontal */
+}
+
 .navbar {
-    background-color: #333;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* Susun tautan navigasi secara vertikal */
+    align-items: center;
+    /* Pusatkan ikon horizontal */
 }
 
 .navbar a {
-    float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px;
     text-decoration: none;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    margin: 10px 0;
+    /* Tambahkan margin atas dan bawah antar ikon */
+    border-radius: 5px;
+    /* Tambahkan radius pada setiap item navigasi */
+}
+
+.navbar a:first-child {
+    margin-top: 0;
+    /* Hilangkan margin atas pada ikon pertama */
+}
+
+.navbar a:last-child {
+    margin-bottom: 0;
+    /* Hilangkan margin bawah pada ikon terakhir */
 }
 
 .navbar a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #555;
+    /* Efek hover yang lebih gelap */
+    opacity: 1;
+    /* Ikon tetap jelas saat hover */
 }
 
 .navbar a.active {
-    background-color: #4CAF50;
-    color: white;
+    opacity: 1;
+    background-color: #007bff;
+    /* Warna latar belakang aktif */
 }
 
-@media screen and (max-width: 600px) {
-    .navbar a {
-        float: none;
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
-
-    .navbar a.active {
-        background-color: #4CAF50;
-        color: white;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .navbar a {
-        float: none;
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
-
-    .navbar a.active {
-        background-color: #4CAF50;
-        color: white;
-    }
-}
-
-/* main */
-main {
-    width: 90vm;
-    margin: 0 auto;
-    padding: 30px 20px;
-    background-color: black;
-}
-
-.ag-courses_box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-
-    padding: 50px 0;
-}
-.ag-courses_item {
-    -ms-flex-preferred-size: calc(33.33333% - 30px);
-    flex-basis: calc(33.33333% - 30px);
-
-    margin: 0 15px 30px;
-
-    overflow: hidden;
-
-    border-radius: 28px;
-}
-.ag-courses-item_link {
+.navbar a img {
     display: block;
-    padding: 30px 20px;
-    background-color: #121212;
-
-    overflow: hidden;
-
-    position: relative;
-}
-.ag-courses-item_link:hover,
-.ag-courses-item_link:hover .ag-courses-item_date {
-    text-decoration: none;
-    color: #FFF;
-}
-.ag-courses-item_link:hover .ag-courses-item_bg {
-    -webkit-transform: scale(10);
-    -ms-transform: scale(10);
-    transform: scale(10);
-}
-.ag-courses-item_title {
-    min-height: 87px;
-    margin: 0 0 25px;
-
-    overflow: hidden;
-
-    font-weight: bold;
-    font-size: 30px;
-    color: #FFF;
-
-    z-index: 2;
-    position: relative;
-}
-.ag-courses-item_date-box {
-    font-size: 18px;
-    color: #FFF;
-
-    z-index: 2;
-    position: relative;
-}
-.ag-courses-item_date {
-    font-weight: bold;
-    color: white;
-
-    -webkit-transition: color 0.5s ease;
-    -o-transition: color 0.5s ease;
-    transition: color 0.5s ease;
-}
-.ag-courses-item_bg {
-    height: 128px;
-    width: 128px;
-    background-color: cyan;
-
-    z-index: 1;
-    position: absolute;
-    top: -75px;
-    right: -75px;
-
-    border-radius: 50%;
-
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
-    background-color: blueviolet;
-}
-.ag-courses_item:nth-child(3n) .ag-courses-item_bg {
-    background-color: rgb(33, 138, 187);
+    height: 30px;
+    /* Atur tinggi ikon */
+    width: auto;
 }
 
-@media only screen and (max-width: 979px) {
-    .ag-courses_item {
-        -ms-flex-preferred-size: calc(50% - 30px);
-        flex-basis: calc(50% - 30px);
-    }
-    .ag-courses-item_title {
-        font-size: 24px;
-    }
+/* Main Content */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px calc(80px + 20px) 30px 20px;
+    /* Beri ruang untuk header vertikal */
+    flex-grow: 1;
+    /* Membuat main content mengambil sisa ruang vertikal */
 }
 
-@media only screen and (max-width: 767px) {
-    .ag-format-container {
-        width: 96%;
-    }
-
-}
-@media only screen and (max-width: 639px) {
-    .ag-courses_item {
-        -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    }
-    .ag-courses-item_title {
-        min-height: 72px;
-        line-height: 1;
-
-        font-size: 24px;
-    }
-    .ag-courses-item_link {
-        padding: 22px 40px;
-    }
-    .ag-courses-item_date-box {
-        font-size: 16px;
-    }
+.jud {
+    text-align: center;
+    padding: 80px 0;
 }
 
 .mainjud {
-    text-align: center;
-    font-size: 50px;
-    color: white;
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .mainp {
-    text-align: center;
-    font-size: 30px;
-    color: white;
+    font-size: 1.5em;
+    color: #ccc;
 }
 
+/* Portofolio Section */
 .portofolio {
-    padding-top: 100px;
-    padding-bottom: 10px;
-    color: white;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    color: #fff;
+    text-align: center;
+    opacity: 0.9;
 }
 
 .mainpor {
-    font-size: 30px;
-    width: 200px;
-    height: 100%;
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .mainporis {
-    padding-top: 10px;
-    font-size: 20px;
-
+    font-size: 1.1em;
+    color: #bbb;
+    margin-bottom: 40px;
 }
 
+.ag-format-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.ag-courses_box {
+    display: grid; /* Gunakan grid untuk tata letak yang lebih modern */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif dengan lebar minimal 300px */
+    gap: 30px;
+    padding: 0;
+}
+
+.ag-courses_item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ag-courses_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ag-courses-item_link {
+    display: block;
+    padding: 25px;
+    background-color: #222; /* Warna latar belakang item portofolio lebih gelap */
+    text-decoration: none;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.ag-courses-item_title {
+    min-height: auto;
+    margin: 0 0 12px;
+    font-weight: 500;
+    font-size: 1.5em;
+    z-index: 2;
+    position: relative;
+}
+
+.ag-courses-item_date-box {
+    font-size: 0.9em;
+    z-index: 2;
+    position: relative;
+    color: #ccc;
+}
+
+.ag-courses-item_date {
+    font-weight: normal;
+}
+
+.ag-courses-item_bg {
+    height: 120px;
+    width: 120px;
+    background-color: #007bff; /* Warna aksen yang menarik */
+    z-index: 1;
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+
+.ag-courses-item_link:hover .ag-courses-item_bg {
+    transform: scale(10);
+}
+
+/* Footer */
 footer {
-    background-color: #333;
+    background-color: #1e1e1e;
     color: #fff;
     padding: 20px;
     text-align: center;
+    font-size: 0.9em;
+    margin-top: auto;
+    /* Mendorong footer ke bawah */
 }
 
 .f1 {
     padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.fa1 {
-    width: 100px;
-    height: 20%;
-}
-
+.fa1,
 .fa2 {
-    width: 50px;
-    height: 20%;
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.fa1:hover,
+.fa2:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 979px) {
+    .ag-courses_item {
+        flex-basis: calc(50% - 40px);
+    }
+
+    header {
+        right: 10px;
+    }
+
+    main {
+        padding-right: calc(60px + 10px);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .ag-courses_item {
+        flex-basis: 100%;
+    }
+
+    header {
+        position: static;
+        /* Kembali ke posisi statis */
+        transform: translateY(0);
+        /* Reset transformasi */
+        width: 100%;
+        align-items: center;
+        flex-direction: row;
+        /* Susun horizontal */
+        justify-content: center;
+        /* Pusatkan horizontal */
+        border-radius: 0;
+        padding: 10px 0;
+    }
+
+    .navbar {
+        flex-direction: row;
+        /* Susun horizontal */
+    }
+
+    .navbar a {
+        margin: 0 10px;
+    }
+
+    main {
+        padding-right: 20px;
+        /* Reset padding kanan */
+    }
+
+    .jud {
+        padding: 50px 0;
+    }
+
+    .mainjud {
+        font-size: 2.5em;
+    }
+
+    .mainp {
+        font-size: 1.2em;
+    }
 }

@@ -86,12 +86,13 @@ window.addEventListener("touchstart", () => {
     }
 });
 
-// 'Game Over' if 'Character' hits the 'Block'
+// 'Game Over' jika 'Character' hits the 'Block'
 let result = setInterval(() => {
     let dinoBottom = parseInt(getComputedStyle(dino).getPropertyValue("bottom"));
     let blockLeft = parseInt(getComputedStyle(block).getPropertyValue("left"));
 
-    if (dinoBottom <= 90 && blockLeft >= 20 && blockLeft <= 145) {
+    // SESUAIKAN NILAI-NILAI INI BERDASARKAN CSS TERBARU
+    if (dinoBottom <= 70 && blockLeft >= 10 && blockLeft <= 50) {
         gameOver.style.display = "block";
         block
             .classList

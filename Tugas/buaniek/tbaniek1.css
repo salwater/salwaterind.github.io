@@ -1,102 +1,129 @@
+/* Reset Dasar dan Body */
 * {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-/* header */
+
+body {
+    background-color: #181818; /* Tema gelap yang menarik */
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Header */
 .navbar {
-    background-color: #333;
+    background-color: rgba(30, 30, 30, 0.9); /* Latar belakang sedikit transparan */
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center; /* Header tetap di atas tengah */
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #444; /* Garis pemisah dengan konten */
 }
 
 .navbar a {
-    float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 15px;
     text-decoration: none;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .navbar a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #555;
+    color: white;
 }
 
 .navbar a.active {
-    background-color: #4CAF50;
+    background-color: #007bff; /* Warna aktif yang menarik */
     color: white;
 }
 
 @media screen and (max-width: 600px) {
-    .navbar a {
-        float: none;
-        display: block;
-        width: 100%;
-        text-align: left;
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
     }
-
-    .navbar a.active {
-        background-color: #4CAF50;
-        color: white;
+    .navbar a {
+        width: 100%;
+        margin: 5px 0;
+        text-align: left;
     }
 }
 
-/* mainl */
-main {
-    width: 90vm;
+/* Main Content (Wikipedia Style) */
+main.wikipedia-style {
+    display: flex;
+    padding: 80px 20px 40px; /* Ruang untuk header dan footer */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 30px 20px;
-    background-color: black;
+}
+
+.sidebar {
+    width: 250px;
+    padding-right: 20px;
+    border-right: 1px solid #444;
+    position: sticky;
+    top: 80px; /* Sesuaikan dengan tinggi header */
+    height: fit-content;
+}
+
+.sidebar h2 {
+    color: #007bff; /* Warna judul sidebar yang menarik */
+    margin-bottom: 10px;
+}
+
+.table-of-contents {
+    list-style: none;
+    padding: 0;
+}
+
+.table-of-contents li {
+    margin-bottom: 8px;
+}
+
+.table-of-contents a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.table-of-contents a:hover {
+    color: #fff;
+}
+
+.content {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
 }
 
 .mainjud {
-    text-align: center;
-    font-size: 50px;
-    color: white;
+    font-size: 2.5em;
+    color: #fff;
+    text-align: left; /* Judul utama di kiri konten */
+    margin-bottom: 10px;
 }
 
 .mainp {
-    text-align: center;
-    font-size: 30px;
-    color: white;
-    padding-bottom: 100px;
-}
-
-@media only screen and (max-width: 767px) {
-    .mainjud {
-        font-size: 30px;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .mainp {
-        font-size: 15px;
-    }
-}
-
-.portofolio {
-    padding-top: 100px;
-    padding-bottom: 10px;
-    color: white;
-}
-
-.mainpor {
-    font-size: 30px;
-    background-color: blue;
-    border-radius: 5px;
-    width: 200px;
-    height: 100%;
-}
-
-.mainporis {
-    padding-top: 10px;
-    font-size: 20px;
-
-}
-
-.isian {
-    color: white;
+    font-size: 1.1em;
+    color: #ccc;
+    padding-bottom: 20px;
 }
 
 .jjtag,
@@ -110,37 +137,24 @@ main {
 .manj,
 .penj,
 .tpj {
-    color: white;
+    color: #eee;
     cursor: pointer;
     margin-bottom: 10px;
-}
-
-.penj:hover {
-    color: #0066cc;
-}
-
-.manj:hover {
-    color: #0066cc;
-}
-
-.jjj:hover {
-    color: #0066cc;
-}
-
-.tpj:hover {
-    color: #0066cc;
+    font-size: 1.4em;
 }
 
 .jjll {
-    color: #7bb5ee;
-    font-size: x-large;
-    font: bold;
-    padding-left: 200px;
+    color: #7bb5ee; /* Warna sub-judul yang menarik */
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-left: 20px; /* Indentasi sub-judul */
+    margin-bottom: 5px;
 }
 
-@media only screen and(max-width: 767px) {
-    .jjll{
-        padding-left: 0px;
+@media only screen and (max-width: 767px) {
+    .jjll {
+        padding-left: 10px;
+        font-size: 1.1em;
     }
 }
 
@@ -149,8 +163,9 @@ main {
 .penl,
 .tpl {
     line-height: 1.6;
-    font-size: large;
-    padding-left: 250px;
+    font-size: 1em;
+    padding-left: 30px; /* Indentasi konten */
+    margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -158,39 +173,71 @@ main {
     .manl,
     .penl,
     .tpl {
-        font-size: medium;
-        padding-left: 0px;
+        font-size: 0.9em;
+        padding-left: 15px;
     }
 }
 
-@media only screen and (max-width: 767px) {
-    .jjll {
-        font-size: large;
-    }
-}
-
-.space{
+.space {
     color: transparent;
-    padding-bottom: 260px;
+    padding-bottom: 20px; /* Sesuaikan spasi bawah */
 }
 
+/* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: rgba(30, 30, 30, 0.9);
+    color: #aaa;
     padding: 20px;
     text-align: center;
+    font-size: 0.85em;
+    border-top: 1px solid #444;
+    width: 100%;
 }
 
 .f1 {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.fa1 {
-    width: 100px;
-    height: 20%;
-}
-
+.fa1,
 .fa2 {
-    width: 50px;
-    height: 20%;
+    width: 30px;
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fa1:hover,
+.fa2:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Responsive untuk tampilan Wikipedia */
+@media screen and (max-width: 900px) {
+    main.wikipedia-style {
+        flex-direction: column;
+        padding-top: 60px; /* Sesuaikan padding untuk header tetap */
+    }
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #444;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        position: static;
+    }
+    .content {
+        padding-left: 0;
+    }
+    .table-of-contents {
+        display: flex;
+        overflow-x: auto;
+    }
+    .table-of-contents li {
+        margin-right: 15px;
+        margin-bottom: 0;
+    }
 }
